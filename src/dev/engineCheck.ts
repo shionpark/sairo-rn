@@ -1,8 +1,5 @@
 import { rankPlaces, type EnginePlaceInput } from '@/lib/recommendEngine';
-import { createMMKV } from 'react-native-mmkv';
-import {
-  STORAGE_KEYS, markJustDiagnosed, readCf8Code, readJustDiagnosed, readSavedIdsKey, toggleSaved,
-} from '@/lib/storage';
+import { STORAGE_KEYS, localStorage, readCf8Code } from '@/lib/storage';
 
 const empty = {
   weatherType: null, isRestaurant: null, barrierFree: null, petAllowed: null,
@@ -32,15 +29,7 @@ export function logEngineCheck() {
   );
 }
 
-const snapshot = () => ({
-  cf8: readCf8Code(), justDiagnosed: readJustDiagnosed(), saved: readSavedIdsKey(),
-});
-
-/** 재시작 뒤 before에 cf8 · saved가 남고 justDiagnosed만 false면 통과. saved는 실행마다 뒤집힌다 */
-export function logStorageCheck() {
-  console.log('[storageCheck] before', snapshot());
-  createMMKV().set(STORAGE_KEYS.cf8Code, '"CLD"');
-  markJustDiagnosed();
-  toggleSaved('test');
-  console.log('[storageCheck] after', snapshot());
+/** 진단 화면이 없어 고정 유형으로 시작한다. 화면이 첫 렌더에 읽으므로 렌더 전에 불러야 한다 */
+export function seedCf8Code() {
+  if (!readCf8Code()) localStorage.setItem(STORAGE_KEYS.cf8Code, '"CLD"');
 }
