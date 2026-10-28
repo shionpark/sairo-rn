@@ -22,7 +22,8 @@ Expo SDK 57 · React Native 0.86 · React 19 · expo-router · NativeWind 4.2.7(
 
 ## 코드베이스 지도
 
-- `src/app/` 화면(파일 = 경로). `_layout.tsx` 하단 탭(`feed` · `saved` · `me`), `index`는 `/feed`로 이동
+- `src/app/` 화면(파일 = 경로). `_layout.tsx` 스택(탭 + `place/[id]`), `(tabs)/_layout.tsx` 하단 탭(`feed` · `saved` · `me`), `(tabs)/index`는 `/feed`로 이동
+- `src/components/` 피드 · 카드 · 스켈레톤. `src/hooks/` 추천 · 저장 목록 훅
 - `src/global.css` · `tailwind.config.js` NativeWind 입력 · 토큰
 - `babel.config.js` · `metro.config.js` NativeWind 연결
 
