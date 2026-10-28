@@ -1,4 +1,8 @@
 import { rankPlaces, type EnginePlaceInput } from '@/lib/recommendEngine';
+import { createMMKV } from 'react-native-mmkv';
+import {
+  STORAGE_KEYS, markJustDiagnosed, readCf8Code, readJustDiagnosed, readSavedIdsKey, toggleSaved,
+} from '@/lib/storage';
 
 const empty = {
   weatherType: null, isRestaurant: null, barrierFree: null, petAllowed: null,
@@ -26,4 +30,17 @@ export function logEngineCheck() {
     '[engineCheck]',
     ranked.slice(0, 3).map((p) => `${p.rank}. ${p.name} ${p.fitScore.toFixed(1)}`)
   );
+}
+
+const snapshot = () => ({
+  cf8: readCf8Code(), justDiagnosed: readJustDiagnosed(), saved: readSavedIdsKey(),
+});
+
+/** 재시작 뒤 before에 cf8 · saved가 남고 justDiagnosed만 false면 통과. saved는 실행마다 뒤집힌다 */
+export function logStorageCheck() {
+  console.log('[storageCheck] before', snapshot());
+  createMMKV().set(STORAGE_KEYS.cf8Code, '"CLD"');
+  markJustDiagnosed();
+  toggleSaved('test');
+  console.log('[storageCheck] after', snapshot());
 }
