@@ -4,7 +4,7 @@
 # SAIRO RN (스파이크)
 
 SAIRO(부산 관광 추천 앱)를 Capacitor(Next.js 정적 export)에서 React Native(Expo)로 옮기는 3일 스파이크.
-목적은 전환 공수 추정치(`docs/decisions/2026-09-25_RN_전환_검토.md` ④). 스토어에 올리지 않는다 · 원격 없음.
+목적은 전환 공수 추정치(`docs/decisions/2026-09-25_RN_전환_검토.md` ④). 스토어에 올리지 않는다 · GitHub 공개 레포(`shionpark/sairo-rn`)로 포트폴리오에 쓴다.
 
 ## 원본과 문서
 
