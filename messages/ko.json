@@ -1,0 +1,348 @@
+{
+  "place": {
+    "save": "{name} 저장",
+    "removeFromSaved": "{name} 저장 해제",
+    "weatherType": {
+      "indoor": "실내",
+      "outdoor": "야외",
+      "mixed": "실내외"
+    },
+    "crowd": {
+      "low": "한산한 편",
+      "high": "붐비는 편"
+    },
+    "budget": {
+      "low": "무료·저렴"
+    },
+    "stay": {
+      "minutes": "보통 {m}분",
+      "hours": "보통 {h}시간",
+      "hoursMinutes": "보통 {h}시간 {m}분"
+    },
+    "fit": {
+      "great": "아주 잘 맞음",
+      "good": "잘 맞음",
+      "fair": "무난함"
+    },
+    "placeType": {
+      "식음형": "먹거리",
+      "시장형": "시장",
+      "해양야경형": "바다·야경",
+      "문화역사형": "문화·역사",
+      "역사·문화": "역사·문화",
+      "전망·야경": "전망·야경",
+      "해변·해안": "해변·해안",
+      "자연·공원": "자연·공원",
+      "시장·먹거리": "시장·먹거리",
+      "문화·관광": "문화·관광",
+      "체험·시설": "체험·시설",
+      "종교·사찰": "종교·사찰",
+      "휴식·웰니스": "휴식·웰니스",
+      "도시·거리": "도시·거리",
+      "쇼핑": "쇼핑"
+    },
+    "savedToast": "저장한 곳에 담았어요",
+    "savedToastAction": "보기",
+    "removedToast": "저장을 해제했어요",
+    "undo": "되돌리기"
+  },
+  "nav": {
+    "forYou": "추천",
+    "saved": "저장",
+    "me": "내 정보",
+    "back": "뒤로 가기",
+    "close": "닫기",
+    "menu": "메뉴"
+  },
+  "screenError": {
+    "title": "화면을 불러오지 못했어요",
+    "body": "잠시 뒤에 다시 시도해 주세요",
+    "action": "다시 시도"
+  },
+  "feed": {
+    "title": "지금 갈 만한 곳",
+    "yourType": "내 여행 유형",
+    "nowIn": "부산 · {weather} · {time} 기준",
+    "weather": {
+      "sunny": "맑음",
+      "cloudy": "흐림",
+      "rainy": "비"
+    },
+    "sortByMatch": "추천순",
+    "sortByLandmark": "대표 명소순",
+    "needQuiz": {
+      "title": "먼저 취향을 알려주세요",
+      "body": "세 가지만 고르면 나에게 맞는 장소를 추천해드려요.",
+      "action": "맞춤 추천받기"
+    },
+    "noResults": {
+      "title": "조건에 맞는 곳을 찾지 못했어요",
+      "body": "고르신 조건을 모두 만족하는 곳이 없어요. 조건을 하나만 줄여도 결과가 크게 늘어납니다.",
+      "action": "조건 다시 고르기"
+    },
+    "nowInNoTime": "부산 · {weather}",
+    "weatherFailed": "날씨를 불러오지 못했어요",
+    "reloadWeather": "날씨 다시 불러오기",
+    "loadFailed": {
+      "title": "목록을 불러오지 못했어요",
+      "body": "연결을 확인한 뒤 다시 시도해주세요.",
+      "action": "다시 시도"
+    }
+  },
+  "saved": {
+    "title": "저장한 곳",
+    "count": "{count}곳",
+    "empty": {
+      "title": "아직 저장한 곳이 없어요",
+      "body": "마음에 드는 곳의 북마크를 누르면 여기에 모입니다. 이 기기에만 저장돼요.",
+      "action": "추천 보러 가기"
+    },
+    "sortLabel": "정렬 기준",
+    "sort": {
+      "recent": "최근 저장순",
+      "fit": "적합도순"
+    },
+    "filterLabel": "지역으로 거르기",
+    "filterAll": "전체",
+    "noneInDistrict": "이 지역에 저장한 곳이 없어요.",
+    "savedAt": {
+      "today": "오늘 저장",
+      "yesterday": "어제 저장",
+      "daysAgo": "{d}일 전 저장",
+      "date": "{m}월 {d}일 저장"
+    }
+  },
+  "me": {
+    "title": "내 정보",
+    "travelStyle": "여행 스타일",
+    "notDiagnosed": "진단 전",
+    "tripConditions": "여행 조건",
+    "conditionsSet": "설정함",
+    "conditionsNone": "설정 안 함",
+    "language": "언어",
+    "locale": {
+      "ko": "한국어",
+      "en": "English"
+    },
+    "about": "이 앱에 대해",
+    "noAccount": "계정이 없습니다. 진단 결과와 저장한 곳은 이 기기에만 남습니다.",
+    "privacy": "개인정보처리방침",
+    "retakeQuiz": "취향 진단 다시 시작하기",
+    "takeQuiz": "진단하기"
+  },
+  "placeDetail": {
+    "back": "뒤로",
+    "photoCount": "{n} / {total}",
+    "photos": "{name} 사진",
+    "prevPhoto": "이전 사진",
+    "nextPhoto": "다음 사진",
+    "fitTitle": "이 곳이 맞는 이유",
+    "facts": {
+      "hours": "영업시간",
+      "closedDays": "휴무일",
+      "indoorOutdoor": "실내·야외",
+      "pet": "반려동물",
+      "phone": "전화",
+      "accessibility": "이동 편의",
+      "accessibilityYes": "안내 있음",
+      "none": "정보 없음"
+    },
+    "placeType": {
+      "역사·문화": "역사·문화",
+      "전망·야경": "전망·야경",
+      "해변·해안": "해변·해안",
+      "자연·공원": "자연·공원",
+      "시장·먹거리": "시장·먹거리",
+      "문화·관광": "문화·관광",
+      "체험·시설": "체험·시설",
+      "종교·사찰": "종교·사찰",
+      "휴식·웰니스": "휴식·웰니스",
+      "도시·거리": "도시·거리",
+      "쇼핑": "쇼핑"
+    },
+    "pet": {
+      "yes": "동반 가능",
+      "no": "동반 불가"
+    },
+    "tipsTitle": "놓치기 쉬운 것",
+    "tips": {
+      "photo": "사진 포인트",
+      "caution": "유의사항"
+    },
+    "accessibilityTitle": "이동 편의 안내",
+    "accessibility": {
+      "parking": "주차",
+      "wheelchair": "휠체어",
+      "exit": "출입구",
+      "elevator": "엘리베이터",
+      "restroom": "화장실",
+      "route": "이동 경로",
+      "stroller": "유아차",
+      "lactationroom": "수유실",
+      "infantsfamilyetc": "영유아 가족",
+      "handicapetc": "지체장애 기타",
+      "publictransport": "대중교통",
+      "ticketoffice": "매표소",
+      "auditorium": "관람석",
+      "helpdog": "보조견",
+      "guidehuman": "안내 요원",
+      "audioguide": "음성 안내",
+      "braileblock": "점자블록",
+      "brailepromotion": "점자 안내물",
+      "blindhandicapetc": "시각장애 기타",
+      "hearinghandicapetc": "청각장애 기타"
+    },
+    "nearbyTitle": "함께 둘러볼 곳",
+    "walkAbout": "도보 약 {m}분",
+    "distanceKm": "{km}km",
+    "map": "지도 보기",
+    "save": "저장하기",
+    "saved": "저장됨",
+    "newWindow": "새 창에서 열림",
+    "source": {
+      "label": "출처",
+      "all": "사진 · 영업 · 이동 편의 정보 — 한국관광공사 TourAPI",
+      "photoArchive": "사진 — 부산광역시 · 부산관광공사",
+      "photoBoth": "사진 — 한국관광공사 TourAPI · 부산광역시 · 부산관광공사",
+      "rest": "영업 · 이동 편의 정보 — 한국관광공사 TourAPI"
+    },
+    "notFound": {
+      "title": "장소를 찾을 수 없어요",
+      "body": "목록이 바뀌었을 수 있어요.",
+      "action": "추천으로"
+    },
+    "loadFailed": {
+      "title": "불러오지 못했어요",
+      "body": "연결을 확인하고 다시 시도해 주세요.",
+      "action": "다시 시도"
+    }
+  },
+  "docent": {
+    "close": "오디오 가이드 닫기",
+    "eyebrow": "오디오 가이드",
+    "lengthGroup": "설명 길이",
+    "length": {
+      "simple": "간단히",
+      "detail": "자세히"
+    },
+    "play": "{length} 재생",
+    "pause": "{length} 일시정지",
+    "source": {
+      "script": "설명 — 공개 자료를 바탕으로 작성",
+      "audio": "음성 — AI 음성 합성",
+      "photoTour": "사진 — 한국관광공사 TourAPI"
+    },
+    "entry": {
+      "title": "오디오 가이드",
+      "body": "이 장소를 어떻게 보면 좋은지 알려드려요"
+    },
+    "playCard": "오디오 가이드 이어 듣기",
+    "pauseCard": "오디오 가이드 일시정지",
+    "stopCard": "오디오 가이드 정지",
+    "openCard": "오디오 가이드 열기",
+    "nowScript": "지금 듣는 원고 보기",
+    "replayCard": "오디오 가이드 다시 듣기"
+  },
+  "landing": {
+    "language": "언어",
+    "eyebrow": "부산에 도착하셨나요?",
+    "title": "지금 갈 곳,\nSAIRO가 골라드릴게요",
+    "lead": "세 단계만 거치면 바로 안내해드릴게요",
+    "steps": {
+      "quiz": {
+        "title": "취향 질문 3개에 답해요",
+        "body": "30초면 끝나요"
+      },
+      "character": {
+        "title": "내 여행 캐릭터를 만나요",
+        "body": "8가지 유형 중 하나예요"
+      },
+      "places": {
+        "title": "지금 갈 만한 곳을 받아요",
+        "body": "날씨와 시간대까지 보고 골라요"
+      }
+    },
+    "start": "시작하기",
+    "browse": "먼저 둘러볼게요"
+  },
+  "onboarding": {
+    "later": "나중에 할게요",
+    "progress": "{current} / {total} · {axis}",
+    "axis": {
+      "atmosphere": "분위기",
+      "placeType": "장소",
+      "experience": "여행 방식"
+    },
+    "quit": {
+      "withResult": {
+        "title": "다음에 고를까요?",
+        "body": "지금 유형 그대로 추천을 볼 수 있어요. 고르던 답은 저장되지 않아요",
+        "keep": "계속 고를게요",
+        "leave": "그만할게요"
+      },
+      "noResult": {
+        "title": "지금 멈추면 추천을 볼 수 없어요",
+        "body": "추천은 세 가지 답으로 만들어요. {remaining}개만 더 고르면 돼요",
+        "keep": "계속 고를게요",
+        "leave": "그래도 둘러볼게요"
+      }
+    },
+    "toast": {
+      "unsaved": "고르던 답은 저장되지 않았어요. 처음부터 골라주세요",
+      "retake": "끝까지 고르면 새 유형으로 바뀌어요"
+    }
+  },
+  "profile": {
+    "label": "이런 여행을 좋아하시는군요",
+    "axesHeading": "내 여행 취향",
+    "poles": {
+      "atmosphere": {
+        "left": "차분",
+        "right": "활기"
+      },
+      "placeType": {
+        "left": "현지",
+        "right": "명소"
+      },
+      "experience": {
+        "left": "한 곳",
+        "right": "여러 곳"
+      }
+    },
+    "promiseTitle": "이렇게 골라드릴게요",
+    "primary": "지금 갈 곳 추천받기",
+    "secondary": "조건 넣고 추천받기",
+    "secondaryHint": "안 맞는 곳은 미리 빼드려요",
+    "more": "이런 여행 더 보기",
+    "top": "맨 위로",
+    "retake": {
+      "label": "다시 하기",
+      "title": "처음부터 다시 할까요?",
+      "body": "진단을 다시 마칠 때까지 지금 유형은 그대로예요",
+      "confirm": "다시 시작하기",
+      "close": "닫기"
+    },
+    "reveal": {
+      "finding": "내 여행 캐릭터는…",
+      "found": "찾았어요!"
+    }
+  },
+  "tripSetup": {
+    "title": "오늘 여행은 어떤가요?",
+    "lead": "고른 조건에 맞는 장소를 추천해드려요",
+    "count": {
+      "one": "하나만",
+      "any": "여러 개",
+      "companion": "한 분 + 동반"
+    },
+    "empty": {
+      "one": "하나를 골라주세요",
+      "any": "해당 없으면 '없어요'를 골라주세요"
+    },
+    "submit": "추천받기",
+    "submitDone": "이대로 추천받기",
+    "later": "나중에 할게요",
+    "reset": "초기화",
+    "clear": "지우기"
+  }
+}
