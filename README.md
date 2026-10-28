@@ -18,6 +18,9 @@ Expo SDK 57 · React Native 0.86 · React 19 · expo-router · NativeWind 4(Tail
 | [RN-CHORE-002](docs/tickets/RN-CHORE-002_shared_logic_port.md) | 추천 엔진 · 타입 · 데이터 이식 | 완료 |
 | [RN-CHORE-003](docs/tickets/RN-CHORE-003_storage_port.md) | 저장소 이식 (localStorage → MMKV) | 완료 |
 | [RN-FEAT-001](docs/tickets/RN-FEAT-001_recommend_text_output.md) | 추천 결과 목록 (로딩 · 에러 · 목록) | 진행 전 |
+| 피드 화면 | `FeedContent` · `PlaceRow` · `PlaceCard` · `Skeleton` | 진행 전 |
+| 장소 상세 | 피드 → 상세 진입 · 뒤로가기 복귀 · 로딩 · 에러 | 진행 전 |
+| iOS 실행 | iOS 시뮬레이터 · 아이폰 dev build (Xcode 26.4+ 필요) | 진행 전 |
 
 ## 측정
 
