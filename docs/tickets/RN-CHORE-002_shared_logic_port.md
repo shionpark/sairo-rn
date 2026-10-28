@@ -12,7 +12,7 @@ RN 스파이크 Day 1-②. 웹 코드 중 화면과 무관한 로직을 복사�
 | Type | CHORE |
 | Severity | - |
 | Layer | Lib |
-| Status | Todo |
+| Status | Done |
 | Repo | `sairo-rn` |
 | Depends | RN-CHORE-001 |
 | Related | `docs/decisions/2026-09-25_RN_전환_검토.md` ④ |
@@ -70,8 +70,9 @@ export type Locale = "ko" | "en";
 
 ## Acceptance Criteria
 
-- [ ] 복사한 파일 전부 `tsc --noEmit` 통과
-- [ ] 엔진 동작 확인: 앱 진입 시 고정 입력으로 `rankPlaces()`를 한 번 부르고 결과 상위 3개를 콘솔에 출력
+- [x] 복사한 파일 전부 `tsc --noEmit` 통과
+- [x] 엔진 동작 확인: 앱 진입 시 고정 입력으로 `rankPlaces()`를 한 번 부르고 결과 상위 3개를 콘솔에 출력
+  - Android 에뮬레이터(API 35) · Expo Go: `[engineCheck] ["1. A 100.0", "2. B 44.4", "3. C 0.0"]`
 
 ---
 
@@ -79,6 +80,6 @@ export type Locale = "ko" | "en";
 
 | 항목 | 값 |
 |---|---|
-| 복사한 파일 수 · 줄 수 | |
-| 수정 없이 통과한 파일 수 · 줄 수 | |
-| 수정한 곳과 이유 | |
+| 복사한 파일 수 · 줄 수 | 22개 · 3,333줄 (`src/lib` 11 · `src/types` 3 · `src/data` 5 · `src/i18n` 1 · `messages` 2) |
+| 수정 없이 통과한 파일 수 · 줄 수 | 20개 · 3,242줄 (파일 91% · 줄 97%) |
+| 수정한 곳과 이유 | ① `src/i18n/routing.ts` 14줄 → 1줄: `next-intl`의 `defineRouting` 대신 `Locale` 타입만 남김 ② `src/types/trip.ts` import 1줄 → 타입 12줄: 화면 컴포넌트(`ChoiceChipGroup`)에서 가져오던 `ChoiceOption` 타입을 파일 안에 옮김 |
