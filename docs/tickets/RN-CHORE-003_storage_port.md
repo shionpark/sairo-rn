@@ -12,7 +12,7 @@ RN 스파이크 Day 1-③. `storage.ts`의 읽기·쓰기를 RN 저장소로 바
 | Type | CHORE |
 | Severity | - |
 | Layer | Lib |
-| Status | Todo |
+| Status | Done |
 | Repo | `sairo-rn` |
 | Depends | RN-CHORE-002 |
 | Related | `docs/decisions/2026-09-25_RN_전환_검토.md` "무엇이 바뀌나" |
@@ -71,14 +71,30 @@ const session = new Map<string, string>();
 
 ## Acceptance Criteria
 
-- [ ] `storage.ts`의 export 시그니처가 바뀌지 않는다
-- [ ] `cf8_code`를 쓰고 앱을 완전히 종료했다 다시 켜도 읽힌다
-- [ ] `JUST_DIAGNOSED`는 앱을 재시작하면 사라진다
-- [ ] `tsc --noEmit` 통과
+- [x] `storage.ts`의 export 시그니처가 바뀌지 않는다
+- [x] `cf8_code`를 쓰고 앱을 완전히 종료했다 다시 켜도 읽힌다
+- [x] `JUST_DIAGNOSED`는 앱을 재시작하면 사라진다
+- [x] `tsc --noEmit` 통과
 
 ---
 
 ## 측정 (결정 문서 ④로)
 
-- 고른 저장소와 이유
-- Expo Go로 되는지, dev build가 필요한지
+- 고른 저장소와 이유: `react-native-mmkv` 4.3.2 (+ `react-native-nitro-modules` 0.37.1). 동기 API(`set` · `getString` · `remove`)라 `storage.ts` 본문을 고치지 않는다
+- Expo Go로 되는지, dev build가 필요한지: **dev build 필요** (Nitro 네이티브 모듈). `npx expo run:android` 첫 빌드 `BUILD SUCCESSFUL in 18m 18s` (실측. NDK 27.1 · Build-Tools 36 · CMake 3.22.1 첫 설치 포함)
+- 수정 범위: `storage.ts` 원본 207줄 그대로 · 맨 위 18줄 추가 (`localStorage` → MMKV 객체, `sessionStorage` → 모듈 변수 `Map`). 원본의 `typeof window` 검사도 RN에서 그대로 통과
+- prebuild가 바꾼 파일: `app.json` `android.package` 추가 · `package.json` `android`/`ios` 스크립트가 `expo run:*`로 바뀜. `android/`는 `.gitignore`
+- 동작 확인 (Android 에뮬레이터 API 35, 강제 종료 후 재실행)
+
+  ```
+  1회 before {"cf8": null,  "justDiagnosed": false, "saved": ""}
+      after  {"cf8": "CLD", "justDiagnosed": true,  "saved": "test"}
+  2회 before {"cf8": "CLD", "justDiagnosed": false, "saved": "test"}
+  ```
+
+- 막힌 곳
+
+  | 막힌 곳 | 해결 | 성격 |
+  |---|---|---|
+  | `expo run:android`를 비대화형으로 실행하면 Metro가 CI 모드라 코드 변경을 다시 읽지 않음 | Metro를 `npx expo start --dev-client`로 다시 띄움 | RN 개발 흐름 |
+  | iOS dev build: SDK 57은 Xcode 26.4+ 필요, 맥이 macOS 14.5라 설치 불가 | macOS Tahoe 업그레이드 후 진행 | 로컬 환경 |

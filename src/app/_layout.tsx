@@ -1,10 +1,11 @@
 import '@/global.css';
 import { useEffect } from 'react';
 import { Tabs } from 'expo-router';
-import { logEngineCheck } from '@/dev/engineCheck';
+import { logEngineCheck, logStorageCheck } from '@/dev/engineCheck';
 
 export default function RootLayout() {
   useEffect(logEngineCheck, []);
+  useEffect(logStorageCheck, []);
   return (
     <Tabs>
       <Tabs.Screen name="index" options={{ href: null }} />
