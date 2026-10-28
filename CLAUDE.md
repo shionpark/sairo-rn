@@ -29,12 +29,12 @@ Expo SDK 57 · React Native 0.86 · React 19 · expo-router · NativeWind 4.2.7(
 ## 명령어
 
 ```bash
-npm run android      # Metro + 에뮬레이터 (Expo Go)
+npm run android      # dev build 설치 + Metro (expo run:android). 네이티브 변경 없으면 npx expo start --dev-client
 npx tsc --noEmit     # 타입 검사
 ```
 
 Node 22 (`nvm deactivate` → `fnm use 22`). `ANDROID_HOME`은 `~/.zshrc`. ESLint · 테스트 프레임워크 없음.
-babel · metro 설정을 바꾸면 `npm run android -- --clear`.
+babel · metro 설정을 바꾸면 `npx expo start --dev-client --clear`.
 
 ## 코드 규칙
 
