@@ -4,7 +4,7 @@ import type { QuizAnswers } from "@/types/cfp";
 const mmkv = createMMKV();
 
 /** 웹 localStorage와 같은 동기 시그니처 */
-const localStorage = {
+export const localStorage = {
   getItem: (key: string) => mmkv.getString(key) ?? null,
   setItem: (key: string, value: string) => mmkv.set(key, value),
   removeItem: (key: string) => mmkv.remove(key),
